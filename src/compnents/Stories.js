@@ -1,80 +1,25 @@
-export default function Stories(){
-    return(        
-        <div class="stories">
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/9gag.svg" alt="9gag"/>
-            </div>
-            <div class="usuario">
-              9gag
-            </div>
-          </div>
+import Story from "./Story"
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/meowed.svg" alt="meowed"/>
-            </div>
-            <div class="usuario">
-              meowed
-            </div>
-          </div>
+export default function Stories() {
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/barked.svg" alt="barked"/>
-            </div>
-            <div class="usuario">
-              barked
-            </div>
-          </div>
+  const dadosStorys = [
+    { imagem: "assets/img/9gag.svg", nome: "9gag" },
+    { imagem: "assets/img/meowed.svg", nome: "meowed" },
+    { imagem: "assets/img/barked.svg", nome: "barked" },
+    { imagem: "assets/img/nathanwpylestrangeplanet.svg", nome: "nathanwpylestrangeplanet" },
+    { imagem: "assets/img/wawawicomics.svg", nome: "wawawicomics" },
+    { imagem: "assets/img/respondeai.svg", nome: "respondeai" },
+    { imagem: "assets/img/filomoderna.svg", nome: "filomoderna" },
+    { imagem: "assets/img/memeriagourmet.svg", nome: "memeriagourmet" }
+  ]
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/nathanwpylestrangeplanet.svg" alt="nathanwpylestrangeplanet"/>
-            </div>
-            <div class="usuario">
-              nathanwpylestrangeplanet
-            </div>
-          </div>
+  return (
+    <div class="stories">
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/wawawicomics.svg" alt="wawawicomics"/>
-            </div>
-            <div class="usuario">
-              wawawicomics
-            </div>
-          </div>
+      {dadosStorys.map(dados => <Story nome={dados.nome} imagem={dados.imagem} />)}
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/respondeai.svg" alt="respondeai"/>
-            </div>
-            <div class="usuario">
-              respondeai
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/filomoderna.svg" alt="filomoderna"/>
-            </div>
-            <div class="usuario">
-              filomoderna
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/memeriagourmet.svg" alt="memeriagourmet"/>
-            </div>
-            <div class="usuario">
-              memeriagourmet
-            </div>
-          </div>
-
-          <div class="setinha">
-            <ion-icon name="chevron-forward-circle"></ion-icon>
-          </div>
-        </div>)
+      <div class="setinha">
+        <ion-icon name="chevron-forward-circle"></ion-icon>
+      </div>
+    </div>)
 }
