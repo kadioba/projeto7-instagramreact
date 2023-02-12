@@ -17,12 +17,19 @@ export default function Post(props) {
     const [estadoCurtida, setCurtida] = useState("heart-outline");
     const [estadoClasseCurtida, setClasseCurtida] = useState("");
     const [numeroCurtidas, setNumeroCurtidas] = useState(curtidasInicial);
+    const [estadoAnimacao, setAnimacao] = useState("like-animacao-escondido");
+
+    function finalizarAnimacao() {
+        setAnimacao("like-animacao-escondido");
+    }
 
     function curtirPost() {
         if (estadoCurtida === "heart-outline") {
             setCurtida("heart");
             setClasseCurtida("curtido");
-            setNumeroCurtidas(numeroCurtidas + 1)
+            setNumeroCurtidas(numeroCurtidas + 1);
+            setAnimacao("like-animacao");
+            setTimeout(finalizarAnimacao, 800);
         }
         else if (estadoCurtida === "heart") {
             setCurtida("heart-outline");
@@ -35,7 +42,9 @@ export default function Post(props) {
         if (estadoCurtida === "heart-outline") {
             setCurtida("heart");
             setClasseCurtida("curtido");
-            setNumeroCurtidas(numeroCurtidas + 1)
+            setNumeroCurtidas(numeroCurtidas + 1);
+            setAnimacao("like-animacao");
+            setTimeout(finalizarAnimacao, 800);
         }
     }
 
@@ -53,6 +62,7 @@ export default function Post(props) {
 
             <div class="conteudo">
                 <img src={props.imgConteudo} alt="" onDoubleClick={curtirPostDoubleClick} data-test="post-image" />
+                <ion-icon name="heart" class={estadoAnimacao} ></ion-icon>
             </div>
 
             <div class="fundo">

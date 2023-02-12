@@ -189,6 +189,36 @@ body {
   width: 100%;
 }
 
+.post .conteudo {
+  position: relative;
+}
+
+.post .conteudo .like-animacao-escondido {
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  margin: auto;
+  z-index: 3;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: none;
+}
+
+.post .conteudo .like-animacao {
+  font-size: 80px;
+  transition: all 0.3s;
+  color: white;
+  position: absolute;
+  margin: auto;
+  z-index: 3;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
 .post .fundo .acoes {
   display: flex;
   justify-content: space-between;
