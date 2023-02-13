@@ -9,9 +9,10 @@ export default function Posts() {
     ];
 
     return (
-        <div class="posts">
+        <div className="posts">
 
             {dadosPosts.map(dado => <Post
+                key={dado.imgConteudo}
                 imgUsr={dado.imgUsr}
                 nomeUsr={dado.nomeUsr}
                 imgConteudo={dado.imgConteudo}

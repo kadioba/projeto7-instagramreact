@@ -49,24 +49,24 @@ export default function Post(props) {
     }
 
     return (
-        <div class="post" data-test="post">
-            <div class="topo">
-                <div class="usuario">
+        <div className="post" data-test="post">
+            <div className="topo">
+                <div className="usuario">
                     <img src={props.imgUsr} alt={props.nomeUsr} />
                     {props.nomeUsr}
                 </div>
-                <div class="acoes">
+                <div className="acoes">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
             </div>
 
-            <div class="conteudo">
+            <div className="conteudo">
                 <img src={props.imgConteudo} alt="" onDoubleClick={curtirPostDoubleClick} data-test="post-image" />
                 <ion-icon name="heart" class={estadoAnimacao} ></ion-icon>
             </div>
 
-            <div class="fundo">
-                <div class="acoes">
+            <div className="fundo">
+                <div className="acoes">
                     <div>
                         <ion-icon name={estadoCurtida} onClick={curtirPost} class={estadoClasseCurtida} data-test="like-post"></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -77,9 +77,9 @@ export default function Post(props) {
                     </div>
                 </div>
 
-                <div class="curtidas">
+                <div className="curtidas">
                     <img src={props.imgCurtidas} alt={props.nomeCurtiu} />
-                    <div class="texto">
+                    <div className="texto">
                         Curtido por <strong>{props.nomeCurtiu}</strong> e <strong>outras <strong data-test="likes-number">{numeroCurtidas.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</strong> pessoas</strong>
                     </div>
                 </div>

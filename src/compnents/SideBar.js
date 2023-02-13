@@ -11,31 +11,31 @@ export default function SideBar() {
 
     function trocarImagemPerfil() {
         const novaImagemPerfil = prompt("Insira o link da sua nova foto.");
-        if (novaImagemPerfil !== "") {
+        if (novaImagemPerfil !== "" && novaImagemPerfil !== undefined && novaImagemPerfil !== null) {
             setImagemPerfil(novaImagemPerfil);
         }
     }
 
     function trocarNomePerfil() {
         const novoNomePerfil = prompt("Digite seu novo nome de perfil.");
-        if (novoNomePerfil !== "") {
+        if (novoNomePerfil !== "" && novoNomePerfil !== undefined && novoNomePerfil !== null) {
             setNomePerfil(novoNomePerfil);
         }
     }
 
     return (
-        <div class="sidebar">
+        <div className="sidebar">
 
             <Usuario imagem={imagemPerfil} nome={nomePerfil} funcaoTrocaImagem={trocarImagemPerfil} funcaoTrocaNome={trocarNomePerfil} />
 
             <Sugestoes />
 
-            <div class="links">
+            <div className="links">
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
                 Hashtags • Idioma
             </div>
 
-            <div class="copyright">
+            <div className="copyright">
                 © 2021 INSTAGRAM DO FACEBOOK
             </div>
         </div>
